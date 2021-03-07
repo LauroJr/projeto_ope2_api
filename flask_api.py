@@ -1,14 +1,16 @@
 # pip freeze > requeriments.txt
 import os
-import sqlite3
-from contextlib import closing
 
+import os
+from flask import Flask
+
+'''
 from flask import Flask, request, jsonify, session, g, redirect, url_for, \
      abort, render_template, flash
-
-from flask_restful import Resource, Api
-from sqlalchemy import create_engine
-from json import dumps
+'''
+# from flask_restful import Resource, Api
+# from sqlalchemy import create_engine
+# from json import dumps
 
 # configuração
 
@@ -44,7 +46,6 @@ def cliente():
 def pet():
     msg = "Tela dos dados pets"
     return render_template('clientes.html', msg=msg)
-
 
 @app.route('/produtos')
 def produtos():
