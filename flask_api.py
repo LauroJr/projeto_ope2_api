@@ -22,7 +22,7 @@ PASSWORD = 'default'
 
 # criar nossa pequena aplicação :)
 app = Flask(__name__)
-app.config.from_object(__name__)
+# app.config.from_object(__name__)
 
 
 @app.route('/')
