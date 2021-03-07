@@ -4,13 +4,13 @@ import os
 import os
 from flask import Flask
 
-'''
+
 from flask import Flask, request, jsonify, session, g, redirect, url_for, \
      abort, render_template, flash
-'''
-# from flask_restful import Resource, Api
-# from sqlalchemy import create_engine
-# from json import dumps
+
+from flask_restful import Resource, Api
+from sqlalchemy import create_engine
+from json import dumps
 
 # configuração
 
