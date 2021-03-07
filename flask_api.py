@@ -1,10 +1,14 @@
 # pip freeze > requeriments.txt
-
+import os
 import sqlite3
 from contextlib import closing
 
-from flask import Flask, request, session, g, redirect, url_for, \
+from flask import Flask, request, jsonify, session, g, redirect, url_for, \
      abort, render_template, flash
+
+from flask_restful import Resource, Api
+from sqlalchemy import create_engine
+from json import dumps
 
 # configuração
 
@@ -53,5 +57,5 @@ def usuários():
     return render_template('clientes.html', msg=msg)
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
