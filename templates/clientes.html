@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Images/logo.jpeg">
-    <title>Clientes</title>
-</head>
-<body>
-    <h1>Clientes</h1>
-    <h2>Página para clientes</h2>
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{ super() }} - Cliente
+{% endblock title %}
+
+
+{% block main %}
+    <h2>{{msg}}</h2>
+{% endblock main %}

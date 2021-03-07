@@ -1,3 +1,5 @@
+# pip freeze > requeriments.txt
+
 import sqlite3
 from contextlib import closing
 
@@ -21,7 +23,8 @@ app.config.from_object(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    msg = 'Tela principal'
+    return render_template('index.html', msg=msg)
 
 @app.route('/login')
 def login():
@@ -31,6 +34,22 @@ def login():
 @app.route('/clientes')
 def cliente():
     msg = "Tela dos dados Cliente"
+    return render_template('clientes.html', msg=msg)
+
+@app.route('/pets')
+def pet():
+    msg = "Tela dos dados pets"
+    return render_template('clientes.html', msg=msg)
+
+
+@app.route('/produtos')
+def produtos():
+    msg = "Cadastre seus produtos"
+    return render_template('clientes.html', msg=msg)
+
+@app.route('/usuarios')
+def usuários():
+    msg = "Tela de Usuário"
     return render_template('clientes.html', msg=msg)
 
 if __name__ == '__main__':

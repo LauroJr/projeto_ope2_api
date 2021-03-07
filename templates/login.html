@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Images/logo.jpeg">
-    <title>Login</title>
-</head>
-<body>
-    <h1>Login</h1>
-    <h2>Faça seu login</h2>
-    <p>msg</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} - Login
+{% endblock title %}
+
+
+{% block main %}
+    <h2>{{msg}}</h2>
+{% endblock main %}
